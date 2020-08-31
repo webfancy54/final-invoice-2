@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Invoice</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+        }
+
+        .container {
+            width: 796px;
+            display: block;
+            margin: auto;
+            padding: 0px 15px
+        }
+
+        h1 {
+            text-transform: uppercase;
+            font-size: 40px;
+            font-weight: 400;
+        }
+
+        p {
+            text-transform: capitalize;
+            font-weight: 400;
+            margin-bottom: 5px;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px 15px;
+            background: #0D83DD;
+            color: #fff;
+            margin-bottom: 40px;
+        }
+
+        .text-uppercase {
+            text-transform: uppercase;
+        }
+
+        .client-info {
+            display: flex;
+            flex-direction: row;
+            padding: 0 15px;
+        }
+
+        .client-info .client-left {
+            width: 50%;
+        }
+
+        .client-middel,
+        .client-right {
+            width: 25%;
+        }
+
+        .client-info h5,
+        .terms h5 {
+            font-weight: 400;
+            color: #959595;
+            text-transform: capitalize;
+            margin-bottom: 10px;
+        }
+
+        .client-right h2 {
+            font-size: 40px;
+            color: #0D83DD;
+            font-weight: 400;
+            margin-top: 10px
+        }
+
+        .table-info {
+            margin-top: 40px;
+            width: 100%;
+        }
+
+        .total-info {
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .table-total-info {
+            width: 40%;
+        }
+
+        .table-total-info p {
+            position: relative;
+            color: #0D83DD;
+        }
+
+        .terms {
+            width: 60%;
+        }
+
+        .table-total-info p span {
+            position: absolute;
+            right: 110px;
+            color: #000;
+        }
+
+        .margin-top {
+            margin-top: 40px;
+        }
+
+        .table {
+            width: 100%;
+            max-width: 100%;
+            margin-bottom: 1rem;
+            background-color: transparent;
+            border-collapse: collapse;
+        }
+
+        .table td,
+        .table th {
+            padding: .75rem;
+            vertical-align: top;
+            border-top: 1px solid #dee2e6
+        }
+
+        .table thead th {
+            vertical-align: bottom;
+            border-bottom: 2px solid #dee2e6;
+            text-align: left;
+            text-transform: capitalize;
+            color: #0D83DD;
+            font-weight: 400;
+            border-top: 3px solid #0D83DD;
+        }
+
+        .table tbody+tbody {
+            border-top: 2px solid #dee2e6
+        }
+
+        .table .table {
+            background-color: #fff
+        }
+
+
+        .table-bordered {
+            border: 1px solid #dee2e6
+        }
+
+        .table-bordered td,
+        .table-bordered th {
+            border: 1px solid #dee2e6
+        }
+
+        .table-bordered thead td,
+        .table-bordered thead th {
+            border-bottom-width: 2px
+        }
+
+        .table-striped tbody tr:nth-of-type(odd) {
+            background-color: rgba(0, 0, 0, .05)
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="invoice">
+                <h1>invoice</h1>
+            </div>
+            <div class="contact">
+                <p>675-574-7453</p>
+                <p>your@gmail.com</p>
+                <p>yourwebsite.com</p>
+            </div>
+            <div class="address">
+                <p>1 your address</p>
+                <p>city, state, country</p>
+                <p class="text-uppercase">zip code</p>
+            </div>
+        </div>
+        <div class="client-info">
+            <div class="client-left">
+                <h5>billed to</h5>
+                <p>client name</p>
+                <p>1 client address</p>
+                <p>city, state, country</p>
+                <p class="text-uppercase">zip code</p>
+            </div>
+            <div class="client-middel">
+                <h5>invoice number</h5>
+                <p>00000</p>
+                <h5>date of issue</h5>
+                <p>10/10/2020</p>
+            </div>
+            <div class="client-right">
+                <h5>invoice total</h5>
+                <h2>0.00৳</h2>
+            </div>
+        </div>
+        <div class="table-info">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>description</th>
+                        <th>unit cost</th>
+                        <th>qty/hr rate</th>
+                        <th>amount</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Name</td>
+                        <td>0.00৳</td>
+                        <td>0</td>
+                        <td>0.00৳</td>
+                    </tr>
+                    <tr>
+                        <td>Name</td>
+                        <td>0.00৳</td>
+                        <td>0</td>
+                        <td>0.00৳</td>
+                    </tr>
+                    <tr>
+                        <td>Name</td>
+                        <td>0.00৳</td>
+                        <td>0</td>
+                        <td>0.00৳</td>
+                    </tr>
+                    <tr>
+                        <td>Name</td>
+                        <td>0.00৳</td>
+                        <td>0</td>
+                        <td>0.00৳</td>
+                    </tr>
+                    <tr>
+                        <td>Name</td>
+                        <td>0.00৳</td>
+                        <td>0</td>
+                        <td>0.00৳</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="total-info">
+            <div class="terms">
+                <h5>invoice terms</h5>
+                <p>ex. please pay your invoice by.....</p>
+            </div>
+            <div class="table-total-info">
+                <p>subtotal <span>0.00৳</span></p>
+                <p>tax <span>0.00৳</span></p>
+                <p>total <span>0.00৳</span></p>
+                <p class="margin-top">amount due (BDT) <span>0.00৳</span></p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

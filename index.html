@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Invoice</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+        }
+
+        span {
+            display: block;
+            font-size: 1em;
+            text-transform: capitalize;
+        }
+
+        .container {
+            width: 796px;
+            display: block;
+            margin: auto;
+            box-sizing: border-box;
+            padding: 15px;
+        }
+
+        h1 {
+            text-transform: uppercase;
+            font-weight: 600;
+            font-size: 2.5em;
+            position: relative;
+            top: 20px;
+        }
+
+        p {
+            font-weight: 400;
+            text-transform: capitalize;
+            margin-bottom: 5px;
+        }
+
+        .header-top,
+        .footer-top {
+            width: 100%;
+            height: 20px;
+            background: #ae0000;
+            margin-bottom: 30px;
+        }
+
+        .head-wrap {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .logo {
+            width: 120px;
+            height: 120px;
+            background: #606060;
+            border-radius: 50%;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .logo-section span {
+            text-align: center;
+            margin-top: 5px;
+            position: relative;
+        }
+
+        .logo-section span::before {
+            content: "";
+            border-bottom: 2px solid #c4c4c4;
+            position: absolute;
+            left: 0;
+            bottom: -2px;
+            width: 100%;
+        }
+
+        .company-dtail {
+            position: relative;
+            top: 100px;
+        }
+
+        .trem-d {
+            display: block;
+            position: relative;
+            top: 70px;
+            float: right;
+        }
+
+        .buy-info {
+            position: relative;
+            padding-top: 150px;
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            padding-bottom: 30px;
+        }
+
+        .buy-info h3 {
+            text-transform: uppercase;
+            margin-bottom: 8px;
+            padding-bottom: 5px;
+            border-bottom: 2px solid #c4c4c4;
+        }
+
+        .bill {
+            width: 49%;
+            margin-right: 2%;
+        }
+
+        .ship {
+            text-align: left;
+            width: 49%;
+            box-sizing: border-box;
+            padding-left: 10px;
+        }
+
+        .table th {
+            text-transform: uppercase;
+            border-color: #ae0000 !important;
+
+        }
+
+        thead {
+            background: #ae0000;
+            color: #fff;
+        }
+
+        .total-money {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .left-info {
+            width: 50%;
+        }
+
+        .total-right-sec {
+            width: 50%;
+        }
+
+        .total-right-sec p {
+            position: relative;
+        }
+
+        .total-right-sec span {
+            display: inline-block;
+            position: absolute;
+            right: 100px;
+        }
+
+        .footer-top {
+            margin-top: 100px;
+        }
+
+
+        .table {
+            width: 100%;
+            max-width: 100%;
+            margin-bottom: 1rem;
+            background-color: transparent;
+            border-collapse: collapse;
+        }
+
+        .table td,
+        .table th {
+            padding: .75rem;
+            vertical-align: top;
+            border-top: 1px solid #dee2e6
+        }
+
+        .table thead th {
+            vertical-align: bottom;
+            border-bottom: 2px solid #dee2e6;
+            text-align: left;
+        }
+
+        .table tbody+tbody {
+            border-top: 2px solid #dee2e6
+        }
+
+        .table .table {
+            background-color: #fff
+        }
+
+
+        .table-bordered {
+            border: 1px solid #dee2e6
+        }
+
+        .table-bordered td,
+        .table-bordered th {
+            border: 1px solid #dee2e6
+        }
+
+        .table-bordered thead td,
+        .table-bordered thead th {
+            border-bottom-width: 2px
+        }
+
+        .table-striped tbody tr:nth-of-type(odd) {
+            background-color: rgba(0, 0, 0, .05)
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header-top"></div>
+        <div class="head-wrap">
+            <div class="company-section">
+                <h1>invoice</h1>
+                <div class="company-dtail">
+                    <p> &#60; your company name &#62; </p>
+                    <p> &#60; 123 street address &#62; </p>
+                    <p> &#60; city, state zip/post code &#62; </p>
+                    <p> &#60; phone number &#62; </p>
+                    <p> &#60; email address &#62; </p>
+                </div>
+            </div>
+            <div class="logo-section">
+                <div class="logo">
+                    <img src="" alt="">
+                </div>
+                <span>date</span>
+                <span>invoice no</span>
+            </div>
+        </div>
+        <div class="trem-d">
+            <p class="terms"><em>&#60;payment terms (due on receipt, due in X days)&#62;</em></p>
+        </div>
+        <div class="buy-info">
+            <div class="bill">
+                <h3>bill to</h3>
+                <p> &#60;contact name&#62; </p>
+                <p> &#60;client company name&#62; </p>
+                <p> &#60;address&#62; </p>
+                <p> &#60;phone&#62; </p>
+                <p> &#60;email&#62; </p>
+            </div>
+            <div class="ship">
+                <h3>ship to</h3>
+                <p> &#60;name/dept&#62; </p>
+                <p> &#60;client company name&#62; </p>
+                <p> &#60;address&#62; </p>
+                <p> &#60;phone&#62; </p>
+            </div>
+        </div>
+        <div class="table-info">
+            <table class="table table-bordered table-striped">
+                <thead>
+                    <tr>
+                        <th>description</th>
+                        <th>qty</th>
+                        <th>unit price</th>
+                        <th>total</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Name</td>
+                        <td>0</td>
+                        <td>0.00৳</td>
+                        <td>0.00৳</td>
+                    </tr>
+                    <tr>
+                        <td>Name</td>
+                        <td>0</td>
+                        <td>0.00৳</td>
+                        <td>0.00৳</td>
+                    </tr>
+                    <tr>
+                        <td>Name</td>
+                        <td>0</td>
+                        <td>0.00৳</td>
+                        <td>0.00৳</td>
+                    </tr>
+                    <tr>
+                        <td>Name</td>
+                        <td>0</td>
+                        <td>0.00৳</td>
+                        <td>0.00৳</td>
+                    </tr>
+                    <tr>
+                        <td>Name</td>
+                        <td>0</td>
+                        <td>0.00৳</td>
+                        <td>0.00৳</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="total-money">
+            <div class="left-info">
+                <p>remarks / payment instruction</p>
+            </div>
+            <div class="total-right-sec">
+                <p>sub total <span>0.00৳</span></p>
+                <p>discount <span>0.00৳</span></p>
+                <p>sub total less discount<span>0.00৳</span></p>
+                <p>tax rate <span>0.00৳</span></p>
+                <p>total tax<span>0.00৳</span></p>
+                <p>shiping/handling<span>0.00৳</span></p>
+                <hr style="margin-bottom: 5px;margin-top: 5px;">
+                <p>balance due <span>৳</span></p>
+            </div>
+        </div>
+        <div class="footer-top"></div>
+    </div>
+</body></html>
